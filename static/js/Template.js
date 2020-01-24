@@ -1,16 +1,20 @@
 
+import $ from 'jquery';
+
+
 class Template
 {
 	Teste()
 	{
-		alert('teste');
+		const teste = $('body');
+		console.log( $('body') );
 	}
 
-	constructor()
+	constructor($)
 	{
 		let self = this;
 
-		self.Teste();
+		self.Teste($);
 	}
 }
 

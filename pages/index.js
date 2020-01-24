@@ -10,10 +10,7 @@ class Home extends Component
 {
     componentDidMount()
     {
-        $(function ()
-        {
-            const TemplateScripts = new Template(window);
-        });
+       const TemplateScripts = new Template();
     }
 
     render()
