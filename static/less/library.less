@@ -1,0 +1,141 @@
+
+/* --------------------------------------------------------------
+RESET
+----------------------------------------------------------------- */
+
+* { margin:0; padding:0; outline:none; border:0; list-style-type:none; text-decoration:none; list-style-image:none; box-sizing:border-box;}
+
+html{font-size:100%; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;}
+header, section, footer, article, figcaption, hgroup, figure, details, aside, img, nav, time, bloquote, svg {display:block;}
+audio, canvas, video {display:inline-block;*display:inline;*zoom:1;}
+audio:not([controls]){display:none;}
+[hidden]{display:none;}
+
+object[type="application/gas-events-uni"] {width:0; height:0; position:absolute; overflow:hidden; display:block; text-indent:-999999px}
+
+input[type="search"], input[type="submit"] {-webkit-appearance:textfield; -moz-box-sizing:content-box; -webkit-box-sizing:content-box; box-sizing:content-box; border-radius:0; -webkit-border-radius:0;}
+
+/* --------------------------------------------------------------
+DEFAULT STYLES
+----------------------------------------------------------------- */
+
+html,body {height:100%;}
+
+/* FORMATING CLASSES
+---------------------------- */
+
+.clear {clear:both;}
+.hide {width:0; height:0; position:absolute; overflow:hidden; display:block; text-indent:-999999px}
+hr {display:none;}
+
+.left {float:left;}
+.right {float:right;}
+.center {margin:0 auto;}
+.middle {display:block; position:relative; top:50%; transform:translateY(-50%);}
+.middleOff {top:inherit; transform:none;}
+
+.cols(@col : 2, @gap : 40px){
+  -moz-column-count: @col;
+  -moz-column-gap: @gap;
+  -webkit-column-count: @col;
+  -webkit-column-gap: @gap;
+  column-count: @col;
+  column-gap: @gap;
+}
+
+.rotate(@grau : 20.20deg){
+  -moz-transform: rotate(@grau);
+  -webkit-transform: rotate(@grau);
+  -o-transform: rotate(@grau);
+  -ms-transform: rotate(@grau);
+  transform: rotate(@grau);
+}
+
+/* BACKGROUNDS */
+
+.gradienteBody
+{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f9f4de+90 */
+  background: #f9f4de;
+  background: -moz-radial-gradient(center, ellipse cover, #ffffff 0%, #f9f4de 90%);
+  background: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%,#f9f4de 90%);
+  background: radial-gradient(ellipse at center, #ffffff 0%,#f9f4de 90%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f9f4de',GradientType=1 );
+}
+
+.bgCover(@cor : rgba(25,25,25,0.9), @att : inherit)
+{
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-color:@cor;
+  background-attachment: @att;
+}
+
+.bgContain(@cor : rgba(25,25,25,0.9), @att : inherit)
+{
+  -webkit-background-size:contain;
+  -moz-background-size:contain;
+  -o-background-size:contain;
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-color:@cor;
+  background-attachment: @att;
+}
+
+/* COLORS */
+
+@dourado : #9b8640;
+@bege : #f8f2da;
+@titulos : #383336;
+@textos : #484848;
+
+/* FONTS */
+
+.font(@size : 13px, @weight : 400, @lineHeight : 18px,@cor : @textos, @style : normal, @upper : none)
+{
+  font-family:'Arial',sans-serif;
+  font-size:@size;
+  font-weight:@weight;
+  line-height:@lineHeight;
+  color:@cor;
+  font-style:@style;
+  text-transform:@upper;
+}
+/*
+.fontaws(@content : "\f000", @size : 18px, @cor : #000)
+{
+  font-family:FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  content:@content;
+  color:@cor;
+  font-size:@size;
+}
+*/
+.titleDiagonal
+{
+  .font(26px,500,52px,@titulos,normal,uppercase); padding-bottom:10px;
+
+  &.preto {color:@titulos}
+  &.branco {color:@bege}
+}
+
+/* EFFECTS */
+
+.transition(@time : 400ms, @animation : ease){
+  -webkit-transition:all @time @animation; /* Safari */
+  transition:all @time @animation;
+}
+
+.placeholder(@cor : rgba(0,0,0,0.5), @style : normal){
+  ::-webkit-input-placeholder {color:@cor; opacity:1; font-style:@style}
+  ::-moz-placeholder {color:@cor; opacity:1; font-style:@style}
+  :-ms-input-placeholder {color:@cor; opacity:1; font-style:@style}
+  :-moz-placeholder {color:@cor; opacity:1; font-style:@style}
+}

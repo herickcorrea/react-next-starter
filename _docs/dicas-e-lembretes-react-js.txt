@@ -1,0 +1,99 @@
+
+USAR PARA BURLAR PROBLEMA DE CROSS ENQUANTO DESENVOLVE A APLICAÇÃO:
+https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf
+
+
+/* ------------------------------------------------------------------
+REACT + NETX
+------------------------------------------------------------------ */
+
+INSTALAÇÃO
+
+1 - Instalar
+
+$ npm init -y					(Inicializar NPM)
+$ npm install --save react react-dom next	(Instala o react + NEXT globalmente)
+$ npm install --save react-helmet		(Plugin q ajuda a deixar itens do <head> dinâmico)
+$ npm install --save @zeit/next-less less	(instala o less pro next)
+$ npm install jquery --save			(instala o jquey no react)
+
+2 - Substituuir o parâmetro "script" todo, com o item abaixo:
+
+"scripts": {
+  "dev": "next",
+  "build": "next build",
+  "start": "next start"
+}
+
+3 - Criar um diretório "pages", na raiz.
+
+4 - Rodar projeto e receber página 404, já que não temos páginas (*.js) criadas.
+
+$ npm run dev
+
+
+
+url
+site_nam
+image
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------
+LEMBRETES JAVASCRIPT
+------------------------------------------------------------------ */
+
+SHORT FOR
+---------------------
+var lista = [1,2,3];
+
+for(var i in lista)
+{
+}
+
+
+SPREAD OPERATOR
+---------------------
+
+O spread operator é igual a array mix
+
+let primeiros = [1,2,3];
+
+let numeros = [...primeiros,4,5,6];
+
+
+REST OPERATOR
+---------------------
+
+O rest operator pega quantos paramos vc quiser passar na função, e converte em um array de informações
+a ser usado dentro da função.
+
+function minhaLIsta(...nomes)
+{
+	console.log(nomes);
+}
+
+minhaLista("herick",alexandre","mauricio");
+
+
+FUNÇÕES ANÔNIMAS
+---------------------
+
+$('').on('click',() => {
+});
+
+
+LOOPS
+---------------------
+
+Dentro de return ou render
+
+{
+	ARRAY.map((item, key) => (
+		<li key={key}><Link href="{item.slug}"><a><i className="{item.icon}" aria-hidden="true"></i><span className="hide">{item.title}</span></a></Link></li>
+	))
+}

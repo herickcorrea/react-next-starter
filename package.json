@@ -1,0 +1,28 @@
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "proxy": "https://pkl.argoapp.com.br:3000",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://hcorrea-at-572044649446:QaH58fpjpNbV13D8hoiobZiJ5Df+DI6+Ez3is1FXZmY=@git-codecommit.us-east-1.amazonaws.com/v1/repos/Argo_WebApp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@zeit/next-less": "^1.0.1",
+    "jquery": "^3.4.1",
+    "less": "^3.10.3",
+    "next": "^9.2.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1"
+  }
+}
