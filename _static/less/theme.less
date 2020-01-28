@@ -1,0 +1,46 @@
+/* --------------------------------------------------------------
+IMPORTAÇÕES
+----------------------------------------------------------------- */
+
+@import url(app-fonts.less);
+@import url(bootstrap.less);
+@import url(library.less);
+
+/* --------------------------------------------------------------
+DEFAULT STYLES
+----------------------------------------------------------------- */
+
+html,body {height:100%;}
+
+body {.font();}
+
+#__next, #wrapPageContent {height:100%;}
+
+
+/* --------------------------------------------------------------
+MAIN HEADER
+----------------------------------------------------------------- */
+
+#mainHeader
+{
+    position:fixed; width:100%; z-index:2; display:none;
+}
+
+/* --------------------------------------------------------------
+HOME COMPONENTS
+----------------------------------------------------------------- */
+
+#bannerDestaques
+{
+    position:relative; width:100%; height:100%; z-index:0; background:#ff0;
+
+    .swiper-container
+    {
+        position:absolute; width:100%; height:100%; overflow:hidden; top:0; left:0; background:#f2f2f2 url('../images/preloader-images.gif') no-repeat center;
+        
+        .swiper-slide
+        {
+            .imgLazyLoad {position:absolute; width:100%; height:100%; z-index:0; top:0}
+        }
+    }	
+}

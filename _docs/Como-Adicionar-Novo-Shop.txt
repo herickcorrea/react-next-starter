@@ -1,0 +1,3 @@
+
+- Criar classe do shop dentro de "[projeto-raiz]/services/Shop/Shops"
+- Importar nova classe do Shop na classe "[projeto-raiz]/services/Shop/ShopContexto"

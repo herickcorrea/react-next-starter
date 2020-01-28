@@ -1,9 +1,26 @@
-import Link from 'next/link';
+import React, { Component } from "react";
+import Template from "../_static/js/Template.js";
 
-const Imagem = (props) => (
-    <div className={props.classes} data-img={props.img}>
-        <img src={props.img} />
-	</div>
-);
+class Imagem extends Component
+{
+    constructor(props)
+    {
+        super(props);
+    }
+
+    componentDidMount()
+    {
+        const TemplateScripts = new Template();
+    }
+
+    render()
+    {
+        return (
+            <div className={this.props.classes} data-img={this.props.img}>
+                <img src={this.props.img} />
+            </div>
+        );
+    }
+};
 
 export default Imagem;

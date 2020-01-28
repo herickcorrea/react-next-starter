@@ -1,7 +1,7 @@
 import Global from "../Global";
 import { Helmet } from "react-helmet";
 
-import "../static/less/template.less"
+import "../_static/less/theme.less";
 
 const Head = (props) => (
     <div>

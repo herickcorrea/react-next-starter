@@ -1,0 +1,5 @@
+https://auth0.com/authenticate/react/oauth2/
+https://manage.auth0.com/tester/callback?connection=google-oauth2&code=HQRIuyFj4WN7q5TL
+
+https://github.com/STRML/react-grid-layout#installation
+https://strml.github.io/react-grid-layout/examples/0-showcase.html
