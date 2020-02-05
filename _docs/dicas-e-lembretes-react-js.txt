@@ -11,12 +11,13 @@ INSTALAÇÃO
 
 1 - Instalar
 
-$ npm init -y					(Inicializar NPM)
-$ npm install --save react react-dom next	(Instala o react + NEXT globalmente)
-$ npm install --save react-helmet		(Plugin q ajuda a deixar itens do <head> dinâmico)
-$ npm install @zeit/next-css			(instala recursos CSS pro next)
-$ npm install --save @zeit/next-less less	(instala o loader de less pro next)
-$ npm install jquery --save			(instala o jquey no react)
+$ npm init -y						(Inicializar NPM)
+$ npm install --save react react-dom next		(Instala o react + NEXT globalmente)
+$ npm install --save react-helmet			(Plugin q ajuda a deixar itens do <head> dinâmico)
+$ npm install @zeit/next-css				(instala recursos CSS pro next)
+$ npm install --save @zeit/next-less less		(instala o loader de less pro next)
+$ npm install jquery --save				(instala o jquey no react)
+$ npm install --save babel-plugin-import-static-files	(instala a função que passa permitir o import de arquivos estáticos)
 
 2 - Substituuir o parâmetro "script" todo, com o item abaixo:
 
