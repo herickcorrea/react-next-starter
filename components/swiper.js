@@ -26,7 +26,7 @@ const SimpleSwiper = (props) => {
             {
                 props.slide.map((banner,key) =>
                     <div key={key}>
-                        <Imagem classes="imgLazyLoad" img={banner.portrait} blank={banner.portrait} />
+                        <Imagem classes="imgLazyLoad" image={banner.portrait} thumbnail={banner.thumbnail} />
                     </div>
                 )
             }

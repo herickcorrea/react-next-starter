@@ -8,7 +8,7 @@ import Imagem from "../components/Imagem";
 import ContentHTML from "../components/ContentHTML";
 import Footer from '../components/Footer';
 
-const API = 'https://shoppingparklagos.com.br/json/lojas/busca/';
+const API = 'https://shoppingparklagos.com.br/json/alimentacao/';
 
 
 class Lojas extends Component
@@ -60,19 +60,19 @@ class Lojas extends Component
         return(
             <div>
                 <Head
-                    url="/lojas"
-                    title="Lojas"
+                    url="/alimentacao"
+                    title="Alimentação"
                     description="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
                     image="#"
                 />
                 <Header
-                    url="/lojas"
-                    page="Lojas"
-                    icon="icon-shopping-bag"
+                    url="/alimentacao"
+                    page="Alimentação"
+                    icon="icon-food"
                 />
                 <main role="main">
                     <section id="nossasLojas">
-                        <h2 className="hide">Nossas Lojas</h2>
+                        <h2 className="hide">Nossos Restaurantes</h2>
                         <ul>
                             {
                                 lojas.map(loja =>
@@ -90,7 +90,6 @@ class Lojas extends Component
                                         {loja.telefone ? (<p><strong>Telefone:</strong> {loja.telefone}</p>) : ''}
                                         {loja.piso ? (<p><strong>Piso:</strong> {loja.piso}</p>) : ''}
                                         {loja.loja ? (<p><strong>Loja:</strong> {loja.loja}</p>) : ''}
-                                        {loja.atividade ? (<p><strong>Atividade:</strong> {loja.atividade}</p>) : ''}
                                     </li>
                                 )
                             }                            

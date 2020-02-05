@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import Head from "../components/Head";
 import Loading from '../components/Loading';
-import Error from "../components/Error";
+import Error from '../components/Error';
 import Header from "../components/Header";
-import SimpleSwiper from "../components/swiper";
+import Imagem from "../components/Imagem";
+import ContentHTML from "../components/ContentHTML";
 import Footer from '../components/Footer';
 
-const API = 'https://shoppingparklagos.com.br/json/home/';
+const API = 'https://shoppingparklagos.com.br/json/sobre/';
 
 class Home extends Component
 {
@@ -15,7 +16,7 @@ class Home extends Component
         super(props);
 
         this.state = {
-            banners: [],
+            content: [],
             isLoading: false,
             error: null,
         };
@@ -34,13 +35,14 @@ class Home extends Component
                 throw new Error('Deu erro no carregamento do JSON ...');
             }
         })
-        .then(data => this.setState({ banners: data.result.banner, isLoading: false }))
+        .then(data => this.setState({ content: data.result[0], isLoading: false }))
         .catch(error => this.setState({ error, isLoading: false }));
-    }
+        
+    }    
 
     render()
     {
-        const { banners, isLoading, error } = this.state;
+        const { content, isLoading, error } = this.state;
 
         if (error)
         {
@@ -51,23 +53,31 @@ class Home extends Component
         {
             return <Loading/>;
         }
-
+        
         return(
             <div id="wrapPageContent">               
                 <Head
-                    url="/"
-                    title="HOME"
+                    url="/sobre"
+                    title="Sobre"
                     description="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
                     image="#"
                 />
-                <Header 
-                    ishome="true"
-                    page="Home"
-                />
-                <div id="bannerDestaques">
-                    <SimpleSwiper slide={banners}/>
-                </div>
-                <Footer classe="big" page="/"/>
+                <Header page="Home" url="/sobre" />
+                <main role="main">
+                    <article id="pageSobre">
+                        <figure>
+                            <Imagem 
+                                classes="imgLazyLoad"
+                                image={content.imagem} 
+                                thumbnail={content.thumbnail} 
+                                width={content.width}
+                                height={content.height} 
+                            />
+                        </figure>
+                        <ContentHTML contentClass="content col-xs-12" content={content.texto} />
+                    </article>
+                </main>
+                <Footer page="/sobre"/>
             </div>
         )
     }

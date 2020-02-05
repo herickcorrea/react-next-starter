@@ -9,16 +9,16 @@ const App = {
     },
     pages : {
         menu_principal : [
-            {slug: '/',                title: 'home'},
-            {slug: '/cinema',          title: 'Cinema'},
-            {slug: '/lojas',           title: 'Lojas'},
-            {slug: '/alimentacao',     title: 'Alimentação'},
-            {slug: '/eventos',         title: 'Eventos'},
-            {slug: '/estacionamento',  title: 'Estacionamento'},
-            {slug: '/promocoes',       title: 'Promoções' },
-            {slug: '/park-lounge',     title: 'Park Lounge'},
-            {slug: '/meus-cupons',     title: 'Meus Cupons'},
-            {slug: '/qr-code',         title: 'QR Code'}
+            {slug: '/',                icon: 'icon-home',                       title: 'Home',              isFooter : true},
+            {slug: '/cinema',          icon: 'icon-cinema',                     title: 'Cinema',            isFooter : true},
+            {slug: '/lojas',           icon: 'icon-shopping-bag',               title: 'Lojas',             isFooter : true},
+            {slug: '/alimentacao',     icon: 'icon-food',                       title: 'Alimentação',       isFooter : true},
+            {slug: '/eventos',         icon: 'icon-calendar',                   title: 'Eventos',           isFooter : true},
+            {slug: '/estacionamento',  icon: 'icon-cab',                        title: 'Estacionamento',    isFooter : false},
+            {slug: '/promocoes',       icon: 'icon-gift',                       title: 'Promoções',         isFooter : false},
+            {slug: '/park-lounge',     icon: 'icon-shopping-support-online',    title: 'Park Lounge',       isFooter : false},
+            {slug: '/meus-cupons',     icon: 'icon-ticket',                     title: 'Meus Cupons',       isFooter : false},
+            {slug: '/qr-code',         icon: 'icon-qrcode',                     title: 'QR Code',           isFooter : false}
         ],
         menu_secundario : [
             {slug: '/como-chegar',     title: 'Como Chegar'},
