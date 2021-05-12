@@ -34,7 +34,7 @@
     "react-helmet": "^5.2.1",
     "react-id-swiper": "^2.4.0",
     "react-progressive-image": "^0.6.0",
-    "swiper": "^5.3.0",
+    "swiper": "^6.5.1",
     "typescript": "^3.7.5",
     "urijs": "^1.19.2"
   }
